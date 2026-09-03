@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hailey | Homepage</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f7f7f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #777;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 90px);
+            line-height: 1;
+            margin-bottom: 25px;
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span {
+            color: #777;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #222;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #555;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 8%;
+            background: white;
+        }
+
+        section:nth-of-type(even) {
+            background: #f7f7f5;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            max-width: 800px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #222;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav {
+                padding: 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">HAILEY.</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-content">
+
+            <h1>
+                Hi, I'm <span>Hailey.</span>
+            </h1>
+
+            <p>
+                Marketing student, creative thinker, and event professional
+                interested in creating experiences that connect people and brands.
+            </p>
+
+            <a href="#work" class="button">View My Work →</a>
+
+        </div>
+    </div>
+
+
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <p class="about">
+            I'm a marketing student at Iowa State University with experience
+            in event coordination, customer service, digital marketing, and
+            project management. I enjoy combining creativity with strategy
+            to create meaningful experiences and effective marketing.
+        </p>
+    </section>
+
+
+    <!-- Work -->
+    <section id="work">
+
+        <h2 class="section-title">What I Do</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Marketing</h3>
+                <p>
+                    Developing marketing strategies, analyzing data, and
+                    creating content that connects with audiences.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Event Management</h3>
+                <p>
+                    Coordinating events, managing schedules, communicating
+                    with vendors, and creating memorable experiences.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Creative Projects</h3>
+                <p>
+                    Designing campaigns, presentations, websites, and other
+                    creative projects that bring ideas to life.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p>
+            Interested in working together or learning more about me?
+        </p>
+
+        <a href="mailto:hburton@iastate.edu" class="button">
+            Get In Touch
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Hailey. All rights reserved.
+    </footer>
+
+</body>
+</html>

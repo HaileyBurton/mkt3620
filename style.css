@@ -1,37 +1,12 @@
 /* =========================================================
-   HAILEY WEBSITE
-   Main stylesheet
+   HAILEY PORTFOLIO
+   Professor Required Layout
    ========================================================= */
 
-/* ---------- COLOR PALETTE ---------- */
-
-:root {
-    --soft-cream: #FFF9F5;
-    --warm-ivory: #F8F0EA;
-
-    --blush: #F3D9D5;
-    --dusty-rose: #DFAEAA;
-    --rosewood: #B97878;
-    --deep-rose: #925B61;
-
-    --soft-sage: #DCE4D8;
-    --sage: #B8C7B1;
-    --muted-green: #899C83;
-
-    --warm-taupe: #C9B9AE;
-    --mocha: #8A746A;
-    --deep-brown: #4A3B38;
-
-    --white: #FFFFFF;
-}
-
-
-/* ---------- BASIC RESET ---------- */
-
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -39,54 +14,91 @@ html {
 }
 
 body {
-    background: var(--soft-cream);
-    color: var(--deep-brown);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+
+    background: #faf9f7;
+    color: #292929;
     line-height: 1.6;
 
-    /* 10% of the screen on each side */
+    /* 10% background on each side */
     padding-left: 10vw;
     padding-right: 10vw;
 }
 
 
-/* ---------- MAIN WEBSITE WRAPPER ---------- */
+/* =========================================================
+   MAIN WEBSITE
+   ========================================================= */
 
 .site-wrapper {
     width: 80vw;
-    max-width: 100%;
     min-height: 100vh;
+
     margin: 0 auto;
 
-    background: var(--white);
+    background: white;
 
-    border-left: 1px solid var(--warm-taupe);
-    border-right: 1px solid var(--warm-taupe);
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+
+    position: relative;
 }
 
 
 /* =========================================================
-   HEADER
+   DECORATIVE SQUARES
+   ========================================================= */
+
+.decorative-square {
+    position: fixed;
+
+    width: 14px;
+    height: 14px;
+
+    border: 1px solid #9b7b75;
+
+    background: transparent;
+
+    z-index: 20;
+}
+
+.square-one {
+    top: 12vh;
+    left: 4vw;
+}
+
+.square-two {
+    top: 45vh;
+    right: 4vw;
+}
+
+.square-three {
+    bottom: 7vh;
+    right: 4vw;
+}
+
+
+/* =========================================================
+   TOP HEADER
    ========================================================= */
 
 .site-header {
     display: grid;
 
-    /*
-       Left = Logo
-       Right = informational graphic
-    */
     grid-template-columns: 20% 80%;
 
-    background: var(--warm-ivory);
+    background: white;
 
-    border-bottom: 1px solid var(--warm-taupe);
+    border-bottom: 1px solid #eeeeee;
 }
 
 
-/* ---------- LOGO ---------- */
+/* =========================================================
+   LOGO
+   ========================================================= */
 
-.site-logo {
+.logo-area {
     min-height: 115px;
 
     display: flex;
@@ -95,293 +107,392 @@ body {
 
     padding: 20px;
 
-    border-right: 1px solid var(--warm-taupe);
+    border-right: 1px solid #eeeeee;
 }
 
-.site-logo a {
-    color: var(--deep-brown);
+.logo {
     text-decoration: none;
 
+    color: #292929;
+
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 2rem;
+
+    font-size: 27px;
     font-weight: 600;
-    letter-spacing: 0.02em;
+
+    letter-spacing: -0.5px;
+
+    transition: color 0.2s ease;
 }
 
-.site-logo a:hover {
-    color: var(--rosewood);
+.logo:hover {
+    color: #9b7b75;
 }
 
 
-/* ---------- INFORMATIONAL GRAPHIC AREA ---------- */
+/* =========================================================
+   INFORMATIONAL GRAPHIC AREA
+   ========================================================= */
 
-.info-graphic {
+.info-area {
     min-height: 65px;
 
     display: flex;
     align-items: center;
 
-    padding: 18px 24px;
+    padding: 18px 25px;
 
-    background: var(--soft-cream);
+    background: #faf9f7;
 
-    font-size: 0.9rem;
-    color: var(--mocha);
+    color: #686868;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #eeeeee;
 }
 
 
 /* =========================================================
-   NAVIGATION
+   TOP PRIMARY NAVIGATION
    ========================================================= */
 
-.navigation-area {
-    grid-column: 2;
-
-    background: var(--white);
-}
-
-
-/* Primary navigation */
-
-.primary-navigation {
-    min-height: 32px;
+.primary-nav {
+    min-height: 38px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
 
-    border-top: 1px solid var(--warm-taupe);
-    border-bottom: 1px solid var(--warm-taupe);
+    gap: 32px;
 
-    background: var(--blush);
+    background: white;
+
+    border-bottom: 1px solid #eeeeee;
 }
 
-.primary-navigation a {
-    color: var(--deep-brown);
+.primary-nav a {
+    position: relative;
+
     text-decoration: none;
 
-    font-size: 0.85rem;
-    font-weight: 600;
+    color: #444;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 8px 0;
 
     transition: color 0.2s ease;
 }
 
-.primary-navigation a:hover,
-.primary-navigation a.active {
-    color: var(--deep-rose);
+.primary-nav a:hover,
+.primary-nav a.active {
+    color: #9b7b75;
 }
 
 
-/* Secondary navigation */
+/* little underline */
 
-.secondary-navigation {
-    min-height: 28px;
+.primary-nav a::after {
+    content: "";
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
+    position: absolute;
 
-    background: var(--soft-cream);
+    left: 0;
+    bottom: 1px;
 
-    border-bottom: 1px solid var(--warm-taupe);
+    width: 0;
+    height: 1.5px;
+
+    background: #9b7b75;
+
+    transition: width 0.2s ease;
 }
 
-.secondary-navigation a {
-    color: var(--mocha);
-    text-decoration: none;
-
-    font-size: 0.75rem;
-}
-
-.secondary-navigation a:hover,
-.secondary-navigation a.active {
-    color: var(--rosewood);
+.primary-nav a:hover::after,
+.primary-nav a.active::after {
+    width: 100%;
 }
 
 
 /* =========================================================
-   MAIN PAGE LAYOUT
+   SECONDARY NAVIGATION
+   ========================================================= */
+
+.secondary-nav {
+    min-height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    background: #faf9f7;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.secondary-nav a {
+    color: #686868;
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+.secondary-nav a:hover {
+    color: #9b7b75;
+}
+
+
+/* =========================================================
+   PROFESSOR'S THREE-COLUMN LAYOUT
    ========================================================= */
 
 .page-layout {
     display: grid;
 
-    /*
-       Left navigation | Main content | Sticky content
-    */
     grid-template-columns: 20% 1fr 20%;
 
-    min-height: 500px;
+    min-height: 560px;
 }
 
 
 /* =========================================================
-   LEFT NAVIGATION
+   LEFT COLUMN
    ========================================================= */
 
-.left-navigation {
-    padding: 28px 22px;
+.left-column {
+    padding: 35px 22px;
 
-    background: var(--warm-ivory);
+    background: #faf9f7;
 
-    border-right: 1px solid var(--warm-taupe);
+    border-right: 1px solid #eeeeee;
 }
 
-.left-navigation h2 {
-    margin-bottom: 18px;
-
-    color: var(--deep-brown);
-
+.left-column h2 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1rem;
-    font-weight: 600;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    margin-bottom: 20px;
 }
 
-.left-navigation ul {
+.left-column ul {
     list-style: none;
 }
 
-.left-navigation li {
+.left-column li {
     margin-bottom: 12px;
 }
 
-.left-navigation a {
-    color: var(--mocha);
+.left-column a {
     text-decoration: none;
 
-    font-size: 0.85rem;
+    color: #686868;
+
+    font-size: 14px;
+
+    transition: color 0.2s ease;
 }
 
-.left-navigation a:hover,
-.left-navigation a.active {
-    color: var(--rosewood);
+.left-column a:hover,
+.left-column a.active {
+    color: #9b7b75;
 }
 
 
 /* =========================================================
-   MAIN CONTENT
+   CENTER / MAIN CONTENT
    ========================================================= */
 
 .main-content {
-    padding: 28px 32px;
+    padding: 35px;
 
-    background: var(--white);
+    background: white;
 }
 
 
-/* ---------- HERO IMAGE ---------- */
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
 
 .hero-image {
     width: 100%;
-    min-height: 180px;
+    height: 210px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     overflow: hidden;
 
-    background: var(--blush);
+    background: #faf9f7;
 
-    border: 1px solid var(--dusty-rose);
+    border: 1px solid #eeeeee;
+
+    position: relative;
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-
     display: block;
+
+    object-fit: cover;
 }
 
 
-/* ---------- CONTENT ---------- */
+/* If there is no image yet */
 
-.main-content h1 {
-    margin-bottom: 14px;
+.hero-placeholder {
+    width: 100%;
+    height: 100%;
 
-    color: var(--deep-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9b7b75;
 
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 2rem;
-    font-weight: 600;
-}
 
-.main-content h2 {
-    margin-top: 30px;
-    margin-bottom: 12px;
-
-    color: var(--deep-rose);
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.4rem;
-}
-
-.main-content h3 {
-    margin-top: 24px;
-    margin-bottom: 8px;
-
-    color: var(--rosewood);
-}
-
-.main-content p {
-    margin-bottom: 16px;
-
-    color: var(--mocha);
-    font-size: 0.95rem;
-}
-
-.main-content img {
-    max-width: 100%;
-    height: auto;
+    font-size: 18px;
 }
 
 
 /* =========================================================
-   RIGHT STICKY CONTENT
+   MAIN CONTENT TYPOGRAPHY
    ========================================================= */
 
-.right-sidebar {
-    padding: 28px 20px;
+.small-heading {
+    color: #9b7b75;
 
-    background: var(--soft-cream);
+    font-size: 13px;
 
-    border-left: 1px solid var(--warm-taupe);
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.main-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.main-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+.main-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    color: #626262;
+
+    font-size: 16px;
+
+    margin-bottom: 18px;
 }
 
 
-/* Sticky behavior */
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 11px 23px;
+
+    background: #292929;
+
+    color: white;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background: #9b7b75;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RIGHT STICKY COLUMN
+   ========================================================= */
+
+.right-column {
+    padding: 35px 20px;
+
+    background: #faf9f7;
+
+    border-left: 1px solid #eeeeee;
+}
+
+
+/* Professor's sticky content */
 
 .sticky-content {
     position: sticky;
+
     top: 25px;
 }
 
-
-/* Sidebar headings */
-
-.right-sidebar h2 {
-    margin-bottom: 15px;
-
-    color: var(--deep-brown);
-
+.right-column h2 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1rem;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
 }
 
 
-/* Sidebar items */
+/* =========================================================
+   SIDEBAR ITEMS
+   ========================================================= */
 
 .sidebar-item {
-    margin-bottom: 18px;
-    padding-bottom: 15px;
+    padding-bottom: 18px;
 
-    border-bottom: 1px solid var(--warm-taupe);
+    margin-bottom: 18px;
+
+    border-bottom: 1px solid #eeeeee;
 }
 
 .sidebar-item:last-child {
@@ -389,66 +500,65 @@ body {
 }
 
 .sidebar-item a {
-    color: var(--rosewood);
+    color: #9b7b75;
+
     text-decoration: none;
 
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 14px;
+
+    font-weight: 500;
 }
 
 .sidebar-item a:hover {
-    color: var(--deep-rose);
+    color: #292929;
 }
 
 .sidebar-item p {
     margin-top: 5px;
 
-    color: var(--mocha);
-    font-size: 0.78rem;
+    color: #777;
+
+    font-size: 12px;
 }
 
 
 /* =========================================================
-   SOCIAL ICONS
+   SOCIAL NETWORKING ICONS
    ========================================================= */
 
 .social-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
 
-    margin-top: 20px;
+    gap: 9px;
+
+    margin-top: 22px;
 }
 
 .social-links a {
-    width: 32px;
-    height: 32px;
+    width: 31px;
+    height: 31px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: var(--dusty-rose);
-
-    color: var(--deep-brown);
+    border: 1px solid #9b7b75;
 
     border-radius: 50%;
 
+    color: #9b7b75;
+
     text-decoration: none;
 
-    font-size: 0.75rem;
+    font-size: 11px;
 
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        transform 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .social-links a:hover {
-    background: var(--rosewood);
-    color: var(--white);
+    background: #9b7b75;
 
-    transform: translateY(-2px);
+    color: white;
 }
 
 
@@ -457,63 +567,37 @@ body {
    ========================================================= */
 
 .site-footer {
+    min-height: 60px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    min-height: 55px;
-
     padding: 15px 25px;
 
-    background: var(--deep-brown);
+    background: #292929;
 
-    color: var(--soft-cream);
+    color: #bdbdbd;
 
-    border-top: 1px solid var(--warm-taupe);
+    font-size: 12px;
 
-    font-size: 0.75rem;
-}
-
-.site-footer a {
-    color: var(--soft-cream);
-    text-decoration: none;
-}
-
-.site-footer a:hover {
-    color: var(--dusty-rose);
+    border-top: 1px solid #eeeeee;
 }
 
 .footer-links {
     display: flex;
-    gap: 18px;
+
+    gap: 20px;
 }
 
-
-/* =========================================================
-   GENERAL BUTTON
-   ========================================================= */
-
-.button {
-    display: inline-block;
-
-    padding: 10px 20px;
-
-    background: var(--rosewood);
-    color: var(--white);
-
-    border: none;
-    border-radius: 4px;
+.site-footer a {
+    color: #bdbdbd;
 
     text-decoration: none;
-
-    font-size: 0.85rem;
-    font-weight: 600;
-
-    transition: background 0.2s ease;
 }
 
-.button:hover {
-    background: var(--deep-rose);
+.site-footer a:hover {
+    color: #9b7b75;
 }
 
 
@@ -536,37 +620,39 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .site-logo {
+    .logo-area {
         border-right: none;
-        border-bottom: 1px solid var(--warm-taupe);
-    }
-
-    .navigation-area {
-        grid-column: 1;
+        border-bottom: 1px solid #eeeeee;
     }
 
     .page-layout {
         grid-template-columns: 1fr;
     }
 
-    .left-navigation {
+    .left-column {
         border-right: none;
-        border-bottom: 1px solid var(--warm-taupe);
+        border-bottom: 1px solid #eeeeee;
     }
 
-    .right-sidebar {
+    .right-column {
         border-left: none;
-        border-top: 1px solid var(--warm-taupe);
+        border-top: 1px solid #eeeeee;
     }
 
     .sticky-content {
         position: static;
     }
 
-    .primary-navigation,
-    .secondary-navigation {
+    .primary-nav {
         flex-wrap: wrap;
-        padding: 10px;
+        height: auto;
+        padding: 8px 15px;
+        gap: 18px;
+    }
+
+    .secondary-nav {
+        flex-wrap: wrap;
+        padding: 8px 15px;
     }
 }
 
@@ -574,24 +660,36 @@ body {
 @media (max-width: 600px) {
 
     body {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
     }
 
     .site-wrapper {
         width: 100vw;
 
-        border-left: none;
-        border-right: none;
+        border: none;
     }
 
     .main-content {
-        padding: 24px 20px;
+        padding: 25px 20px;
+    }
+
+    .hero-image {
+        height: 160px;
+    }
+
+    .main-content h1 {
+        font-size: 34px;
     }
 
     .site-footer {
         flex-direction: column;
+
         gap: 10px;
+
         text-align: center;
+    }
+
+    .decorative-square {
+        display: none;
     }
 }

@@ -1,104 +1,65 @@
-/* =========================================================
-   HAILEY
-   SHARED NAVIGATION
-   ========================================================= */
+const navItems = [
+    {
+        name: "Home",
+        url: "index.html"
+    },
+    {
+        name: "About Me",
+        url: "about.html"
+    },
+    {
+        name: "Experience",
+        url: "experience.html"
+    },
+    {
+        name: "Projects",
+        url: "projects.html"
+    },
+    {
+        name: "Resume",
+        url: "resume.html"
+    },
+    {
+        name: "Contact",
+        url: "contact.html"
+    },
+    {
+        name: "Portfolio",
+        url: "projects.html"
+    },
+    {
+        name: "Personal",
+        url: "personal.html"
+    }
+];
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    const navigationItems = [
-        {
-            name: "Home",
-            url: "index.html"
-        },
-        {
-            name: "About Me",
-            url: "about.html"
-        },
-        {
-            name: "Experience",
-            url: "experience.html"
-        },
-        {
-            name: "Projects",
-            url: "projects.html"
-        },
-        {
-            name: "Resume",
-            url: "resume.html"
-        },
-        {
-            name: "Contact",
-            url: "contact.html"
-        }
-    ];
+const currentPage =
+    window.location.pathname.split("/").pop() || "index.html";
 
 
-    /* =====================================================
-       LOGO
-       ===================================================== */
+const navigation = document.getElementById("navigation");
 
-    const logoContainer =
-        document.getElementById("logo-container");
 
-    if (logoContainer) {
+navigation.innerHTML = `
 
-        logoContainer.innerHTML = `
+    <a href="index.html" class="logo">
+        Hailey
+    </a>
+
+    <div class="nav-links">
+
+        ${navItems.map(item => `
+
             <a
-                href="index.html"
-                class="logo"
-                aria-label="Hailey home"
+                href="${item.url}"
+                class="${currentPage === item.url ? "active" : ""}"
             >
-                Hailey
+                ${item.name}
             </a>
-        `;
 
-    }
+        `).join("")}
 
+    </div>
 
-    /* =====================================================
-       NAVIGATION LINKS
-       ===================================================== */
-
-    const navContainer =
-        document.getElementById("nav-links");
-
-    if (navContainer) {
-
-        const currentPage =
-            window.location.pathname
-                .split("/")
-                .pop();
-
-
-        navigationItems.forEach(function (item) {
-
-            const link =
-                document.createElement("a");
-
-            link.href = item.url;
-
-            link.textContent = item.name;
-
-
-            /* Highlight current page */
-
-            if (
-                currentPage === item.url ||
-                (
-                    currentPage === "" &&
-                    item.url === "index.html"
-                )
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-
-            navContainer.appendChild(link);
-
-        });
-
-    }
-
-});
+`;

@@ -1,15 +1,11 @@
 /* =========================================================
    HAILEY
-   SHARED NAVIGATION SYSTEM
+   SHARED NAVIGATION
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* -------------------------------------------------------
-       TOP PRIMARY NAVIGATION
-       ------------------------------------------------------- */
-
-    const primaryNavigation = [
+    const navigationItems = [
         {
             name: "Home",
             url: "index.html"
@@ -37,91 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
 
-    /* -------------------------------------------------------
-       SECONDARY NAVIGATION
-       ------------------------------------------------------- */
-
-    const secondaryNavigation = [
-        {
-            name: "Portfolio",
-            url: "projects.html"
-        },
-        {
-            name: "Personal",
-            url: "personal.html"
-        }
-    ];
-
-
-    /* -------------------------------------------------------
-       CREATE PRIMARY NAVIGATION
-       ------------------------------------------------------- */
-
-    const primaryNav =
-        document.getElementById("primary-nav");
-
-    if (primaryNav) {
-
-        primaryNavigation.forEach(function (item) {
-
-            const link = document.createElement("a");
-
-            link.href = item.url;
-            link.textContent = item.name;
-
-            /* Highlight current page */
-
-            const currentPage =
-                window.location.pathname.split("/").pop();
-
-            if (
-                currentPage === item.url ||
-                (currentPage === "" &&
-                 item.url === "index.html")
-            ) {
-                link.classList.add("active");
-            }
-
-            primaryNav.appendChild(link);
-
-        });
-
-    }
-
-
-    /* -------------------------------------------------------
-       CREATE SECONDARY NAVIGATION
-       ------------------------------------------------------- */
-
-    const secondaryNav =
-        document.getElementById("secondary-nav");
-
-    if (secondaryNav) {
-
-        secondaryNavigation.forEach(function (item) {
-
-            const link = document.createElement("a");
-
-            link.href = item.url;
-            link.textContent = item.name;
-
-            secondaryNav.appendChild(link);
-
-        });
-
-    }
-
-
-    /* -------------------------------------------------------
+    /* =====================================================
        LOGO
-       ------------------------------------------------------- */
+       ===================================================== */
 
-    const logoArea =
-        document.getElementById("logo-area");
+    const logoContainer =
+        document.getElementById("logo-container");
 
-    if (logoArea) {
+    if (logoContainer) {
 
-        logoArea.innerHTML = `
+        logoContainer.innerHTML = `
             <a
                 href="index.html"
                 class="logo"
@@ -130,6 +51,53 @@ document.addEventListener("DOMContentLoaded", function () {
                 Hailey
             </a>
         `;
+
+    }
+
+
+    /* =====================================================
+       NAVIGATION LINKS
+       ===================================================== */
+
+    const navContainer =
+        document.getElementById("nav-links");
+
+    if (navContainer) {
+
+        const currentPage =
+            window.location.pathname
+                .split("/")
+                .pop();
+
+
+        navigationItems.forEach(function (item) {
+
+            const link =
+                document.createElement("a");
+
+            link.href = item.url;
+
+            link.textContent = item.name;
+
+
+            /* Highlight current page */
+
+            if (
+                currentPage === item.url ||
+                (
+                    currentPage === "" &&
+                    item.url === "index.html"
+                )
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+
+            navContainer.appendChild(link);
+
+        });
 
     }
 

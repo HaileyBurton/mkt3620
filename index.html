@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Hailey</title>
+    <title>Hailey | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -19,57 +19,67 @@
 
 <body>
 
+<!-- Decorative squares -->
+
+<div class="decorative-square square-one"></div>
+<div class="decorative-square square-two"></div>
+<div class="decorative-square square-three"></div>
+
+
 <div class="site-wrapper">
+
 
     <!-- ================= HEADER ================= -->
 
     <header class="site-header">
 
-        <!-- LOGO -->
+
+        <!-- TOP LEFT LOGO -->
+
         <div
-            class="site-logo"
-            id="site-logo"
+            class="logo-area"
+            id="logo-area"
         ></div>
 
 
         <!-- INFORMATIONAL GRAPHIC -->
-        <div class="info-graphic">
 
-            This area is for an informational graphic
-            describing what your site is about.
+        <div class="info-area">
 
-        </div>
-
-
-        <!-- NAVIGATION -->
-        <div class="navigation-area">
-
-            <nav
-                class="primary-navigation"
-                id="primary-navigation"
-                aria-label="Primary navigation"
-            ></nav>
-
-
-            <nav
-                class="secondary-navigation"
-                id="secondary-navigation"
-                aria-label="Secondary navigation"
-            ></nav>
+            A marketing student and creative thinker
+            interested in events, branding, and creating
+            experiences people remember.
 
         </div>
+
+
+        <!-- PRIMARY NAVIGATION -->
+
+        <nav
+            class="primary-nav"
+            id="primary-nav"
+        ></nav>
+
+
+        <!-- SECONDARY NAVIGATION -->
+
+        <nav
+            class="secondary-nav"
+            id="secondary-nav"
+        ></nav>
+
 
     </header>
 
 
-    <!-- ================= MAIN PAGE ================= -->
+    <!-- ================= PAGE ================= -->
 
     <div class="page-layout">
 
 
-        <!-- LEFT NAVIGATION -->
+        <!-- LEFT COLUMN -->
 
-        <aside class="left-navigation">
+        <aside class="left-column">
 
             <h2>Explore</h2>
 
@@ -99,6 +109,12 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="resume.html">
+                        Resume
+                    </a>
+                </li>
+
             </ul>
 
         </aside>
@@ -108,9 +124,11 @@
 
         <main class="main-content">
 
+
+            <!-- HERO IMAGE -->
+
             <div class="hero-image">
 
-                <!-- Replace with your image -->
                 <img
                     src="images/hero.jpg"
                     alt="Hailey portfolio"
@@ -119,29 +137,46 @@
             </div>
 
 
-            <h1>Welcome</h1>
+            <div class="small-heading">
+                Welcome to my portfolio
+            </div>
+
+
+            <h1>
+                Hi, I'm Hailey
+            </h1>
+
 
             <p>
-                This is where the main content for each
-                page will go.
+                I'm a marketing student and creative thinker
+                interested in branding, events, digital
+                marketing, and creating experiences that
+                connect people.
             </p>
 
-            <p>
-                Your professional information, projects,
-                experience, photography, writing, and
-                other portfolio content can live here.
-            </p>
+
+            <a
+                href="about.html"
+                class="button"
+            >
+                Get to know me →
+            </a>
+
 
         </main>
 
 
         <!-- RIGHT STICKY CONTENT -->
 
-        <aside class="right-sidebar">
+        <aside class="right-column">
 
             <div class="sticky-content">
 
-                <h2>Stay Connected</h2>
+
+                <h2>
+                    Explore
+                </h2>
+
 
                 <div class="sidebar-item">
 
@@ -150,7 +185,8 @@
                     </a>
 
                     <p>
-                        Explore my latest projects.
+                        Take a look at some of my
+                        favorite projects.
                     </p>
 
                 </div>
@@ -163,7 +199,21 @@
                     </a>
 
                     <p>
-                        View my experience and skills.
+                        View my education,
+                        experience, and skills.
+                    </p>
+
+                </div>
+
+
+                <div class="sidebar-item">
+
+                    <a href="contact.html">
+                        Let's Connect
+                    </a>
+
+                    <p>
+                        Get in touch with me.
                     </p>
 
                 </div>
@@ -171,23 +221,25 @@
 
                 <div class="social-links">
 
-                    <a href="#" aria-label="LinkedIn">
+                    <a href="#">
                         in
                     </a>
 
-                    <a href="#" aria-label="Instagram">
+                    <a href="#">
                         ig
                     </a>
 
-                    <a href="#" aria-label="Email">
+                    <a href="#">
                         @
                     </a>
 
                 </div>
 
+
             </div>
 
         </aside>
+
 
     </div>
 
@@ -218,12 +270,11 @@
 
     </footer>
 
+
 </div>
 
 
-<!-- NAVIGATION JAVASCRIPT -->
-
-<script src="navigation.js"></script>
+<script src="nav.js"></script>
 
 </body>
 

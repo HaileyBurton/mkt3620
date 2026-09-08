@@ -2,552 +2,228 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>hailey | Portfolio</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <style>
+    <title>Hailey</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
-            background: #faf9f7;
-            color: #292929;
-            line-height: 1.6;
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        .site-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 22px 8%;
-
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-
-            border-bottom: 1px solid #eeeeee;
-        }
-
-        .logo {
-            text-decoration: none;
-            color: #292929;
-
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 27px;
-            font-weight: 600;
-
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-        .nav-links a {
-            position: relative;
-
-            text-decoration: none;
-            color: #444;
-
-            font-size: 14px;
-            font-weight: 500;
-
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: #9b7b75;
-        }
-
-        .nav-links a::after {
-            content: "";
-
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-
-            width: 0;
-            height: 1.5px;
-
-            background: #9b7b75;
-
-            transition: width 0.2s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 78vh;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            padding: 80px 20px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .small-heading {
-            font-size: 14px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-
-            color: #9b7b75;
-
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-size: clamp(55px, 9vw, 100px);
-
-            font-weight: 500;
-            line-height: 1;
-
-            letter-spacing: -4px;
-
-            margin-bottom: 28px;
-        }
-
-        .hero h1 span {
-            color: #9b7b75;
-        }
-
-        .hero p {
-            max-width: 650px;
-
-            margin: 0 auto 35px;
-
-            font-size: 19px;
-
-            color: #686868;
-        }
-
-        .button {
-            display: inline-block;
-
-            padding: 13px 26px;
-
-            background: #292929;
-            color: white;
-
-            border-radius: 30px;
-
-            text-decoration: none;
-
-            font-size: 14px;
-            font-weight: 500;
-
-            transition: all 0.2s ease;
-        }
-
-        .button:hover {
-            background: #9b7b75;
-            transform: translateY(-2px);
-        }
-
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
-        section {
-            padding: 90px 8%;
-        }
-
-        .about-section {
-            background: white;
-        }
-
-        .section-container {
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .section-label {
-            color: #9b7b75;
-
-            font-size: 13px;
-            font-weight: 600;
-
-            letter-spacing: 2px;
-            text-transform: uppercase;
-
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-size: 42px;
-            font-weight: 500;
-
-            margin-bottom: 25px;
-        }
-
-        .about-text {
-            font-size: 18px;
-            color: #626262;
-
-            max-width: 750px;
-        }
-
-
-        /* =========================
-           CARDS
-        ========================= */
-
-        .work-section {
-            background: #faf9f7;
-        }
-
-        .cards {
-            display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(250px, 1fr));
-
-            gap: 25px;
-
-            margin-top: 40px;
-        }
-
-        .card {
-            background: white;
-
-            padding: 32px;
-
-            border: 1px solid #eeeeee;
-            border-radius: 18px;
-
-            transition: all 0.25s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 15px 35px rgba(0, 0, 0, 0.07);
-        }
-
-        .card-icon {
-            font-size: 24px;
-            margin-bottom: 18px;
-        }
-
-        .card h3 {
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-size: 23px;
-            font-weight: 500;
-
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #6b6b6b;
-            font-size: 15px;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact-section {
-            background: white;
-            text-align: center;
-        }
-
-        .contact-section .section-container {
-            max-width: 650px;
-        }
-
-        .contact-section p {
-            color: #686868;
-            margin-bottom: 28px;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            text-align: center;
-
-            padding: 30px;
-
-            background: #292929;
-
-            color: #bdbdbd;
-
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 700px) {
-
-            .site-nav {
-                padding: 18px 20px;
-            }
-
-            .nav-links {
-                gap: 15px;
-            }
-
-            .nav-links a {
-                font-size: 12px;
-            }
-
-            .hero {
-                min-height: 70vh;
-            }
-
-            .hero h1 {
-                font-size: 65px;
-                letter-spacing: -3px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            section {
-                padding: 65px 20px;
-            }
-
-            .section-title {
-                font-size: 35px;
-            }
-        }
-
-    </style>
 </head>
 
 
 <body>
 
+<div class="site-wrapper">
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- ================= HEADER ================= -->
 
-    <div class="hero">
+    <header class="site-header">
 
-        <div class="hero-content">
+        <!-- LOGO -->
+        <div
+            class="site-logo"
+            id="site-logo"
+        ></div>
 
-            <div class="small-heading">
-                Welcome to my portfolio
-            </div>
 
-            <h1>
-                Hi, I'm <span>Hailey</span>
-            </h1>
+        <!-- INFORMATIONAL GRAPHIC -->
+        <div class="info-graphic">
 
-            <p>
-                A marketing student and creative thinker interested in
-                branding, events, digital marketing, and creating experiences
-                that connect people.
-            </p>
-
-            <a href="about.html" class="button">
-                Get to know me →
-            </a>
+            This area is for an informational graphic
+            describing what your site is about.
 
         </div>
+
+
+        <!-- NAVIGATION -->
+        <div class="navigation-area">
+
+            <nav
+                class="primary-navigation"
+                id="primary-navigation"
+                aria-label="Primary navigation"
+            ></nav>
+
+
+            <nav
+                class="secondary-navigation"
+                id="secondary-navigation"
+                aria-label="Secondary navigation"
+            ></nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN PAGE ================= -->
+
+    <div class="page-layout">
+
+
+        <!-- LEFT NAVIGATION -->
+
+        <aside class="left-navigation">
+
+            <h2>Explore</h2>
+
+            <ul>
+
+                <li>
+                    <a href="about.html">
+                        About Me
+                    </a>
+                </li>
+
+                <li>
+                    <a href="personal.html">
+                        Personal
+                    </a>
+                </li>
+
+                <li>
+                    <a href="experience.html">
+                        Experience
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <div class="hero-image">
+
+                <!-- Replace with your image -->
+                <img
+                    src="images/hero.jpg"
+                    alt="Hailey portfolio"
+                >
+
+            </div>
+
+
+            <h1>Welcome</h1>
+
+            <p>
+                This is where the main content for each
+                page will go.
+            </p>
+
+            <p>
+                Your professional information, projects,
+                experience, photography, writing, and
+                other portfolio content can live here.
+            </p>
+
+        </main>
+
+
+        <!-- RIGHT STICKY CONTENT -->
+
+        <aside class="right-sidebar">
+
+            <div class="sticky-content">
+
+                <h2>Stay Connected</h2>
+
+                <div class="sidebar-item">
+
+                    <a href="projects.html">
+                        Featured Work
+                    </a>
+
+                    <p>
+                        Explore my latest projects.
+                    </p>
+
+                </div>
+
+
+                <div class="sidebar-item">
+
+                    <a href="resume.html">
+                        Resume
+                    </a>
+
+                    <p>
+                        View my experience and skills.
+                    </p>
+
+                </div>
+
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="LinkedIn">
+                        in
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        ig
+                    </a>
+
+                    <a href="#" aria-label="Email">
+                        @
+                    </a>
+
+                </div>
+
+            </div>
+
+        </aside>
 
     </div>
 
 
-    <!-- =========================
-         ABOUT PREVIEW
-    ========================= -->
+    <!-- ================= FOOTER ================= -->
 
-    <section class="about-section">
+    <footer class="site-footer">
 
-        <div class="section-container">
+        <span>
+            © 2026 Hailey. All rights reserved.
+        </span>
 
-            <div class="section-label">
-                A little about me
-            </div>
+        <div class="footer-links">
 
-            <h2 class="section-title">
-                More than just a resume.
-            </h2>
+            <a href="index.html">
+                Home
+            </a>
 
-            <p class="about-text">
-                I'm a marketing student at Iowa State University with
-                experience in event coordination, customer service,
-                marketing, and project management. I enjoy bringing
-                creativity and strategy together to create ideas,
-                experiences, and campaigns that people remember.
-            </p>
+            <a href="contact.html">
+                Contact
+            </a>
 
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         WHAT I DO
-    ========================= -->
-
-    <section class="work-section">
-
-        <div class="section-container">
-
-            <div class="section-label">
-                What I do
-            </div>
-
-            <h2 class="section-title">
-                A few of my interests.
-            </h2>
-
-
-            <div class="cards">
-
-                <div class="card">
-
-                    <div class="card-icon">✦</div>
-
-                    <h3>
-                        Marketing
-                    </h3>
-
-                    <p>
-                        Exploring branding, digital marketing, consumer
-                        behavior, and creative ways to connect brands
-                        with their audiences.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="card-icon">♡</div>
-
-                    <h3>
-                        Events
-                    </h3>
-
-                    <p>
-                        Coordinating events, managing details, working
-                        with people, and creating experiences that
-                        bring communities together.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="card-icon">✧</div>
-
-                    <h3>
-                        Creativity
-                    </h3>
-
-                    <p>
-                        Designing presentations, campaigns, websites,
-                        and other projects that turn ideas into
-                        something people can see and experience.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section class="contact-section" id="contact">
-
-        <div class="section-container">
-
-            <div class="section-label">
-                Let's connect
-            </div>
-
-            <h2 class="section-title">
-                I'd love to hear from you.
-            </h2>
-
-            <p>
-                Whether you're interested in working together,
-                learning more about me, or just saying hello.
-            </p>
-
-            <a href="mailto:YOUR-EMAIL@example.com" class="button">
-                Get in touch
+            <a href="resume.html">
+                Resume
             </a>
 
         </div>
 
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
-
-        © 2026 Hailey · Built with care ♡
-
     </footer>
 
+</div>
 
-    <!-- Shared navigation -->
-    <script src="nav.js"></script>
+
+<!-- NAVIGATION JAVASCRIPT -->
+
+<script src="navigation.js"></script>
 
 </body>
 

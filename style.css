@@ -1,0 +1,597 @@
+/* =========================================================
+   HAILEY WEBSITE
+   Main stylesheet
+   ========================================================= */
+
+/* ---------- COLOR PALETTE ---------- */
+
+:root {
+    --soft-cream: #FFF9F5;
+    --warm-ivory: #F8F0EA;
+
+    --blush: #F3D9D5;
+    --dusty-rose: #DFAEAA;
+    --rosewood: #B97878;
+    --deep-rose: #925B61;
+
+    --soft-sage: #DCE4D8;
+    --sage: #B8C7B1;
+    --muted-green: #899C83;
+
+    --warm-taupe: #C9B9AE;
+    --mocha: #8A746A;
+    --deep-brown: #4A3B38;
+
+    --white: #FFFFFF;
+}
+
+
+/* ---------- BASIC RESET ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--soft-cream);
+    color: var(--deep-brown);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+
+    /* 10% of the screen on each side */
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+
+/* ---------- MAIN WEBSITE WRAPPER ---------- */
+
+.site-wrapper {
+    width: 80vw;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    background: var(--white);
+
+    border-left: 1px solid var(--warm-taupe);
+    border-right: 1px solid var(--warm-taupe);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    display: grid;
+
+    /*
+       Left = Logo
+       Right = informational graphic
+    */
+    grid-template-columns: 20% 80%;
+
+    background: var(--warm-ivory);
+
+    border-bottom: 1px solid var(--warm-taupe);
+}
+
+
+/* ---------- LOGO ---------- */
+
+.site-logo {
+    min-height: 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    border-right: 1px solid var(--warm-taupe);
+}
+
+.site-logo a {
+    color: var(--deep-brown);
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.site-logo a:hover {
+    color: var(--rosewood);
+}
+
+
+/* ---------- INFORMATIONAL GRAPHIC AREA ---------- */
+
+.info-graphic {
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 18px 24px;
+
+    background: var(--soft-cream);
+
+    font-size: 0.9rem;
+    color: var(--mocha);
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navigation-area {
+    grid-column: 2;
+
+    background: var(--white);
+}
+
+
+/* Primary navigation */
+
+.primary-navigation {
+    min-height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    border-top: 1px solid var(--warm-taupe);
+    border-bottom: 1px solid var(--warm-taupe);
+
+    background: var(--blush);
+}
+
+.primary-navigation a {
+    color: var(--deep-brown);
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a.active {
+    color: var(--deep-rose);
+}
+
+
+/* Secondary navigation */
+
+.secondary-navigation {
+    min-height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    background: var(--soft-cream);
+
+    border-bottom: 1px solid var(--warm-taupe);
+}
+
+.secondary-navigation a {
+    color: var(--mocha);
+    text-decoration: none;
+
+    font-size: 0.75rem;
+}
+
+.secondary-navigation a:hover,
+.secondary-navigation a.active {
+    color: var(--rosewood);
+}
+
+
+/* =========================================================
+   MAIN PAGE LAYOUT
+   ========================================================= */
+
+.page-layout {
+    display: grid;
+
+    /*
+       Left navigation | Main content | Sticky content
+    */
+    grid-template-columns: 20% 1fr 20%;
+
+    min-height: 500px;
+}
+
+
+/* =========================================================
+   LEFT NAVIGATION
+   ========================================================= */
+
+.left-navigation {
+    padding: 28px 22px;
+
+    background: var(--warm-ivory);
+
+    border-right: 1px solid var(--warm-taupe);
+}
+
+.left-navigation h2 {
+    margin-bottom: 18px;
+
+    color: var(--deep-brown);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.left-navigation ul {
+    list-style: none;
+}
+
+.left-navigation li {
+    margin-bottom: 12px;
+}
+
+.left-navigation a {
+    color: var(--mocha);
+    text-decoration: none;
+
+    font-size: 0.85rem;
+}
+
+.left-navigation a:hover,
+.left-navigation a.active {
+    color: var(--rosewood);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main-content {
+    padding: 28px 32px;
+
+    background: var(--white);
+}
+
+
+/* ---------- HERO IMAGE ---------- */
+
+.hero-image {
+    width: 100%;
+    min-height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    overflow: hidden;
+
+    background: var(--blush);
+
+    border: 1px solid var(--dusty-rose);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ---------- CONTENT ---------- */
+
+.main-content h1 {
+    margin-bottom: 14px;
+
+    color: var(--deep-brown);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.main-content h2 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+
+    color: var(--deep-rose);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+}
+
+.main-content h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+
+    color: var(--rosewood);
+}
+
+.main-content p {
+    margin-bottom: 16px;
+
+    color: var(--mocha);
+    font-size: 0.95rem;
+}
+
+.main-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   RIGHT STICKY CONTENT
+   ========================================================= */
+
+.right-sidebar {
+    padding: 28px 20px;
+
+    background: var(--soft-cream);
+
+    border-left: 1px solid var(--warm-taupe);
+}
+
+
+/* Sticky behavior */
+
+.sticky-content {
+    position: sticky;
+    top: 25px;
+}
+
+
+/* Sidebar headings */
+
+.right-sidebar h2 {
+    margin-bottom: 15px;
+
+    color: var(--deep-brown);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+}
+
+
+/* Sidebar items */
+
+.sidebar-item {
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid var(--warm-taupe);
+}
+
+.sidebar-item:last-child {
+    border-bottom: none;
+}
+
+.sidebar-item a {
+    color: var(--rosewood);
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.sidebar-item a:hover {
+    color: var(--deep-rose);
+}
+
+.sidebar-item p {
+    margin-top: 5px;
+
+    color: var(--mocha);
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--dusty-rose);
+
+    color: var(--deep-brown);
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.social-links a:hover {
+    background: var(--rosewood);
+    color: var(--white);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 55px;
+
+    padding: 15px 25px;
+
+    background: var(--deep-brown);
+
+    color: var(--soft-cream);
+
+    border-top: 1px solid var(--warm-taupe);
+
+    font-size: 0.75rem;
+}
+
+.site-footer a {
+    color: var(--soft-cream);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: var(--dusty-rose);
+}
+
+.footer-links {
+    display: flex;
+    gap: 18px;
+}
+
+
+/* =========================================================
+   GENERAL BUTTON
+   ========================================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background: var(--rosewood);
+    color: var(--white);
+
+    border: none;
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    transition: background 0.2s ease;
+}
+
+.button:hover {
+    background: var(--deep-rose);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    body {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .site-wrapper {
+        width: 90vw;
+    }
+
+    .site-header {
+        grid-template-columns: 1fr;
+    }
+
+    .site-logo {
+        border-right: none;
+        border-bottom: 1px solid var(--warm-taupe);
+    }
+
+    .navigation-area {
+        grid-column: 1;
+    }
+
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .left-navigation {
+        border-right: none;
+        border-bottom: 1px solid var(--warm-taupe);
+    }
+
+    .right-sidebar {
+        border-left: none;
+        border-top: 1px solid var(--warm-taupe);
+    }
+
+    .sticky-content {
+        position: static;
+    }
+
+    .primary-navigation,
+    .secondary-navigation {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .site-wrapper {
+        width: 100vw;
+
+        border-left: none;
+        border-right: none;
+    }
+
+    .main-content {
+        padding: 24px 20px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

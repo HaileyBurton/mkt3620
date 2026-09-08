@@ -1,23 +1,22 @@
 /* =========================================================
-   HAILEY WEBSITE
-   Reusable Navigation System
+   HAILEY
+   SHARED NAVIGATION SYSTEM
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
     /* -------------------------------------------------------
-       MAIN NAVIGATION
-       Change the hrefs here if your filenames are different
+       TOP PRIMARY NAVIGATION
        ------------------------------------------------------- */
 
-    const navigationItems = [
+    const primaryNavigation = [
+        {
+            name: "Home",
+            url: "index.html"
+        },
         {
             name: "About Me",
             url: "about.html"
-        },
-        {
-            name: "Personal",
-            url: "personal.html"
         },
         {
             name: "Experience",
@@ -40,58 +39,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* -------------------------------------------------------
        SECONDARY NAVIGATION
-       Optional — remove items if you don't need them
        ------------------------------------------------------- */
 
-    const secondaryItems = [
-        {
-            name: "Home",
-            url: "index.html"
-        },
+    const secondaryNavigation = [
         {
             name: "Portfolio",
             url: "projects.html"
+        },
+        {
+            name: "Personal",
+            url: "personal.html"
         }
     ];
-
-
-    /* -------------------------------------------------------
-       FIND NAVIGATION CONTAINERS
-       ------------------------------------------------------- */
-
-    const primaryNavigation =
-        document.getElementById("primary-navigation");
-
-    const secondaryNavigation =
-        document.getElementById("secondary-navigation");
 
 
     /* -------------------------------------------------------
        CREATE PRIMARY NAVIGATION
        ------------------------------------------------------- */
 
-    if (primaryNavigation) {
+    const primaryNav =
+        document.getElementById("primary-nav");
 
-        navigationItems.forEach(function (item) {
+    if (primaryNav) {
+
+        primaryNavigation.forEach(function (item) {
 
             const link = document.createElement("a");
 
             link.href = item.url;
             link.textContent = item.name;
 
-            /*
-               Automatically identify the current page
-            */
+            /* Highlight current page */
+
+            const currentPage =
+                window.location.pathname.split("/").pop();
 
             if (
-                window.location.pathname.endsWith(item.url)
+                currentPage === item.url ||
+                (currentPage === "" &&
+                 item.url === "index.html")
             ) {
                 link.classList.add("active");
             }
 
-            primaryNavigation.appendChild(link);
+            primaryNav.appendChild(link);
 
         });
+
     }
 
 
@@ -99,38 +93,40 @@ document.addEventListener("DOMContentLoaded", function () {
        CREATE SECONDARY NAVIGATION
        ------------------------------------------------------- */
 
-    if (secondaryNavigation) {
+    const secondaryNav =
+        document.getElementById("secondary-nav");
 
-        secondaryItems.forEach(function (item) {
+    if (secondaryNav) {
+
+        secondaryNavigation.forEach(function (item) {
 
             const link = document.createElement("a");
 
             link.href = item.url;
             link.textContent = item.name;
 
-            if (
-                window.location.pathname.endsWith(item.url)
-            ) {
-                link.classList.add("active");
-            }
-
-            secondaryNavigation.appendChild(link);
+            secondaryNav.appendChild(link);
 
         });
+
     }
 
 
     /* -------------------------------------------------------
        LOGO
-       Clicking Hailey always returns home
        ------------------------------------------------------- */
 
-    const logo = document.getElementById("site-logo");
+    const logoArea =
+        document.getElementById("logo-area");
 
-    if (logo) {
+    if (logoArea) {
 
-        logo.innerHTML = `
-            <a href="index.html" aria-label="Hailey home">
+        logoArea.innerHTML = `
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Hailey home"
+            >
                 Hailey
             </a>
         `;

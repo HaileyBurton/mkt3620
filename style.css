@@ -1,6 +1,5 @@
 /* =========================================================
    HAILEY PORTFOLIO
-   Professor Required Layout
    ========================================================= */
 
 * {
@@ -19,6 +18,7 @@ body {
 
     background: #faf9f7;
     color: #292929;
+
     line-height: 1.6;
 
     /* 10% background on each side */
@@ -28,7 +28,7 @@ body {
 
 
 /* =========================================================
-   MAIN WEBSITE
+   WEBSITE CONTAINER
    ========================================================= */
 
 .site-wrapper {
@@ -41,8 +41,6 @@ body {
 
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
-
-    position: relative;
 }
 
 
@@ -53,67 +51,66 @@ body {
 .decorative-square {
     position: fixed;
 
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
 
     border: 1px solid #9b7b75;
 
     background: transparent;
 
-    z-index: 20;
+    z-index: 10;
 }
 
 .square-one {
-    top: 12vh;
-    left: 4vw;
+    top: 18%;
+    left: 5%;
 }
 
 .square-two {
-    top: 45vh;
-    right: 4vw;
+    top: 52%;
+    right: 5%;
 }
 
 .square-three {
-    bottom: 7vh;
-    right: 4vw;
+    bottom: 15%;
+    left: 5%;
 }
 
 
 /* =========================================================
-   TOP HEADER
+   TOP NAVIGATION
    ========================================================= */
 
-.site-header {
-    display: grid;
+.site-nav {
+    position: sticky;
+    top: 0;
 
-    grid-template-columns: 20% 80%;
+    z-index: 1000;
 
-    background: white;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 35px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(10px);
 
     border-bottom: 1px solid #eeeeee;
 }
 
 
-/* =========================================================
-   LOGO
-   ========================================================= */
-
-.logo-area {
-    min-height: 115px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 20px;
-
-    border-right: 1px solid #eeeeee;
-}
+/* ---------- LOGO ---------- */
 
 .logo {
-    text-decoration: none;
+    flex-shrink: 0;
 
     color: #292929;
+
+    text-decoration: none;
 
     font-family: Georgia, "Times New Roman", serif;
 
@@ -130,76 +127,47 @@ body {
 }
 
 
-/* =========================================================
-   INFORMATIONAL GRAPHIC AREA
-   ========================================================= */
+/* ---------- NAVIGATION LINKS ---------- */
 
-.info-area {
-    min-height: 65px;
-
+.nav-links {
     display: flex;
     align-items: center;
 
-    padding: 18px 25px;
+    gap: 28px;
 
-    background: #faf9f7;
-
-    color: #686868;
-
-    font-size: 13px;
-
-    border-bottom: 1px solid #eeeeee;
+    list-style: none;
 }
 
-
-/* =========================================================
-   TOP PRIMARY NAVIGATION
-   ========================================================= */
-
-.primary-nav {
-    min-height: 38px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 32px;
-
-    background: white;
-
-    border-bottom: 1px solid #eeeeee;
-}
-
-.primary-nav a {
+.nav-links a {
     position: relative;
-
-    text-decoration: none;
 
     color: #444;
 
-    font-size: 14px;
+    text-decoration: none;
+
+    font-size: 13px;
     font-weight: 500;
 
-    padding: 8px 0;
+    padding: 5px 0;
 
     transition: color 0.2s ease;
 }
 
-.primary-nav a:hover,
-.primary-nav a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: #9b7b75;
 }
 
 
 /* little underline */
 
-.primary-nav a::after {
+.nav-links a::after {
     content: "";
 
     position: absolute;
 
     left: 0;
-    bottom: 1px;
+    bottom: 0;
 
     width: 0;
     height: 1.5px;
@@ -209,226 +177,93 @@ body {
     transition: width 0.2s ease;
 }
 
-.primary-nav a:hover::after,
-.primary-nav a.active::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
 }
 
 
 /* =========================================================
-   SECONDARY NAVIGATION
+   HERO
    ========================================================= */
 
-.secondary-nav {
-    min-height: 30px;
+.hero {
+    min-height: 72vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    gap: 25px;
+    text-align: center;
+
+    padding: 80px 30px;
 
     background: #faf9f7;
 
     border-bottom: 1px solid #eeeeee;
 }
 
-.secondary-nav a {
-    color: #686868;
-
-    text-decoration: none;
-
-    font-size: 12px;
-}
-
-.secondary-nav a:hover {
-    color: #9b7b75;
+.hero-content {
+    max-width: 800px;
 }
 
 
-/* =========================================================
-   PROFESSOR'S THREE-COLUMN LAYOUT
-   ========================================================= */
-
-.page-layout {
-    display: grid;
-
-    grid-template-columns: 20% 1fr 20%;
-
-    min-height: 560px;
-}
-
-
-/* =========================================================
-   LEFT COLUMN
-   ========================================================= */
-
-.left-column {
-    padding: 35px 22px;
-
-    background: #faf9f7;
-
-    border-right: 1px solid #eeeeee;
-}
-
-.left-column h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 17px;
-    font-weight: 500;
-
-    margin-bottom: 20px;
-}
-
-.left-column ul {
-    list-style: none;
-}
-
-.left-column li {
-    margin-bottom: 12px;
-}
-
-.left-column a {
-    text-decoration: none;
-
-    color: #686868;
-
-    font-size: 14px;
-
-    transition: color 0.2s ease;
-}
-
-.left-column a:hover,
-.left-column a.active {
-    color: #9b7b75;
-}
-
-
-/* =========================================================
-   CENTER / MAIN CONTENT
-   ========================================================= */
-
-.main-content {
-    padding: 35px;
-
-    background: white;
-}
-
-
-/* =========================================================
-   HERO IMAGE
-   ========================================================= */
-
-.hero-image {
-    width: 100%;
-    height: 210px;
-
-    margin-bottom: 35px;
-
-    overflow: hidden;
-
-    background: #faf9f7;
-
-    border: 1px solid #eeeeee;
-
-    position: relative;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-}
-
-
-/* If there is no image yet */
-
-.hero-placeholder {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #9b7b75;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 18px;
-}
-
-
-/* =========================================================
-   MAIN CONTENT TYPOGRAPHY
-   ========================================================= */
+/* ---------- SMALL HEADING ---------- */
 
 .small-heading {
     color: #9b7b75;
 
     font-size: 13px;
-
     font-weight: 600;
 
     letter-spacing: 2px;
 
     text-transform: uppercase;
 
-    margin-bottom: 12px;
-}
-
-.main-content h1 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 42px;
-
-    font-weight: 500;
-
-    line-height: 1.1;
-
-    margin-bottom: 20px;
-}
-
-.main-content h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 28px;
-
-    font-weight: 500;
-
-    margin-bottom: 15px;
-}
-
-.main-content h3 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 21px;
-
-    font-weight: 500;
-
-    margin-bottom: 10px;
-}
-
-.main-content p {
-    color: #626262;
-
-    font-size: 16px;
-
     margin-bottom: 18px;
 }
 
 
-/* =========================================================
-   BUTTON
-   ========================================================= */
+/* ---------- HERO TITLE ---------- */
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(55px, 8vw, 95px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 28px;
+}
+
+.hero h1 span {
+    color: #9b7b75;
+}
+
+
+/* ---------- HERO TEXT ---------- */
+
+.hero p {
+    max-width: 650px;
+
+    margin: 0 auto 32px;
+
+    color: #686868;
+
+    font-size: 18px;
+}
+
+
+/* ---------- HERO BUTTON ---------- */
 
 .button {
     display: inline-block;
 
-    padding: 11px 23px;
+    padding: 12px 25px;
 
     background: #292929;
 
@@ -452,10 +287,192 @@ body {
 
 
 /* =========================================================
-   RIGHT STICKY COLUMN
+   PROFESSOR REQUIRED CONTENT AREA
    ========================================================= */
 
-.right-column {
+.content-layout {
+    display: grid;
+
+    grid-template-columns: 20% 1fr 20%;
+
+    min-height: 500px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.left-content {
+    padding: 35px 22px;
+
+    background: #faf9f7;
+
+    border-right: 1px solid #eeeeee;
+}
+
+.left-content-label {
+    color: #9b7b75;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.left-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+.left-content p {
+    color: #707070;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.left-content a {
+    color: #9b7b75;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+.left-content a:hover {
+    color: #292929;
+}
+
+
+/* =========================================================
+   CENTER CONTENT
+   ========================================================= */
+
+.main-content {
+    padding: 40px 35px;
+
+    background: white;
+}
+
+
+/* ---------- SECTION LABEL ---------- */
+
+.section-label {
+    color: #9b7b75;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+
+/* ---------- SECTION TITLE ---------- */
+
+.main-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+
+/* ---------- PARAGRAPHS ---------- */
+
+.main-content p {
+    color: #626262;
+
+    font-size: 16px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   THREE INTEREST CARDS
+   ========================================================= */
+
+.interest-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.interest-card {
+    padding: 20px;
+
+    background: #faf9f7;
+
+    border: 1px solid #eeeeee;
+
+    transition: all 0.2s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #9b7b75;
+}
+
+.interest-icon {
+    color: #9b7b75;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.interest-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    margin-bottom: 7px;
+}
+
+.interest-card p {
+    color: #707070;
+
+    font-size: 12px;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+   ========================================================= */
+
+.right-content {
     padding: 35px 20px;
 
     background: #faf9f7;
@@ -464,79 +481,80 @@ body {
 }
 
 
-/* Professor's sticky content */
+/* Sticky area */
 
-.sticky-content {
+.right-sticky {
     position: sticky;
 
-    top: 25px;
+    top: 100px;
 }
 
-.right-column h2 {
+
+/* ---------- RIGHT TITLE ---------- */
+
+.right-content h2 {
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 17px;
+    font-size: 19px;
 
     font-weight: 500;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 
-/* =========================================================
-   SIDEBAR ITEMS
-   ========================================================= */
+/* ---------- RIGHT ITEMS ---------- */
 
-.sidebar-item {
-    padding-bottom: 18px;
+.right-item {
+    padding-bottom: 15px;
 
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 
     border-bottom: 1px solid #eeeeee;
 }
 
-.sidebar-item:last-child {
+.right-item:last-child {
     border-bottom: none;
 }
 
-.sidebar-item a {
+.right-item a {
     color: #9b7b75;
 
     text-decoration: none;
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: 500;
 }
 
-.sidebar-item a:hover {
+.right-item a:hover {
     color: #292929;
 }
 
-.sidebar-item p {
-    margin-top: 5px;
-
+.right-item p {
     color: #777;
 
-    font-size: 12px;
+    font-size: 11px;
+
+    margin-top: 4px;
 }
 
 
 /* =========================================================
-   SOCIAL NETWORKING ICONS
+   SOCIAL LINKS
    ========================================================= */
 
 .social-links {
     display: flex;
 
-    gap: 9px;
+    gap: 8px;
 
-    margin-top: 22px;
+    margin-top: 20px;
 }
 
 .social-links a {
-    width: 31px;
-    height: 31px;
+    width: 30px;
+    height: 30px;
 
     display: flex;
     align-items: center;
@@ -550,7 +568,7 @@ body {
 
     text-decoration: none;
 
-    font-size: 11px;
+    font-size: 10px;
 
     transition: all 0.2s ease;
 }
@@ -566,14 +584,14 @@ body {
    FOOTER
    ========================================================= */
 
-.site-footer {
-    min-height: 60px;
-
+footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
-    padding: 15px 25px;
+    min-height: 60px;
+
+    padding: 20px;
 
     background: #292929;
 
@@ -581,23 +599,7 @@ body {
 
     font-size: 12px;
 
-    border-top: 1px solid #eeeeee;
-}
-
-.footer-links {
-    display: flex;
-
-    gap: 20px;
-}
-
-.site-footer a {
-    color: #bdbdbd;
-
-    text-decoration: none;
-}
-
-.site-footer a:hover {
-    color: #9b7b75;
+    text-align: center;
 }
 
 
@@ -616,48 +618,45 @@ body {
         width: 90vw;
     }
 
-    .site-header {
+    .site-nav {
+        padding: 18px 22px;
+    }
+
+    .nav-links {
+        gap: 17px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .content-layout {
         grid-template-columns: 1fr;
     }
 
-    .logo-area {
+    .left-content {
         border-right: none;
+
         border-bottom: 1px solid #eeeeee;
     }
 
-    .page-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .left-column {
-        border-right: none;
-        border-bottom: 1px solid #eeeeee;
-    }
-
-    .right-column {
+    .right-content {
         border-left: none;
+
         border-top: 1px solid #eeeeee;
     }
 
-    .sticky-content {
+    .right-sticky {
         position: static;
     }
 
-    .primary-nav {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 8px 15px;
-        gap: 18px;
-    }
-
-    .secondary-nav {
-        flex-wrap: wrap;
-        padding: 8px 15px;
+    .interest-cards {
+        grid-template-columns: 1fr;
     }
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     body {
         padding: 0;
@@ -669,24 +668,40 @@ body {
         border: none;
     }
 
-    .main-content {
-        padding: 25px 20px;
-    }
-
-    .hero-image {
-        height: 160px;
-    }
-
-    .main-content h1 {
-        font-size: 34px;
-    }
-
-    .site-footer {
+    .site-nav {
         flex-direction: column;
 
-        gap: 10px;
+        gap: 15px;
+    }
 
-        text-align: center;
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 65vh;
+
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .main-content {
+        padding: 30px 22px;
+    }
+
+    .main-content h2 {
+        font-size: 32px;
     }
 
     .decorative-square {

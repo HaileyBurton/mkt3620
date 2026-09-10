@@ -12,13 +12,8 @@ const navigationItems = [
     },
 
     {
-        name: "About Me",
-        url: "about.html"
-    },
-
-    {
-        name: "Experience",
-        url: "experience.html"
+        name: "Explore",
+        url: "#explore"
     },
 
     {
@@ -27,23 +22,13 @@ const navigationItems = [
     },
 
     {
-        name: "Resume",
-        url: "resume.html"
+        name: "About Me",
+        url: "about.html"
     },
 
     {
         name: "Contact",
         url: "contact.html"
-    },
-
-    {
-        name: "Portfolio",
-        url: "projects.html"
-    },
-
-    {
-        name: "Personal",
-        url: "personal.html"
     }
 
 ];
@@ -65,10 +50,6 @@ document.addEventListener(
         }
 
 
-        /* -----------------------------------------
-           FIND CURRENT PAGE
-           ----------------------------------------- */
-
         let currentPage =
             window.location.pathname
                 .split("/")
@@ -82,18 +63,33 @@ document.addEventListener(
         }
 
 
-        /* -----------------------------------------
-           CREATE NAVIGATION
-           ----------------------------------------- */
-
         navigationContainer.innerHTML = `
 
             <div class="nav-links">
 
                 ${navigationItems.map(function (item) {
 
-                    const isActive =
-                        currentPage === item.url;
+                    let isActive = false;
+
+
+                    if (
+                        item.url === currentPage
+                    ) {
+
+                        isActive = true;
+
+                    }
+
+
+                    if (
+                        item.name === "Explore" &&
+                        window.location.hash === "#explore"
+                    ) {
+
+                        isActive = true;
+
+                    }
+
 
                     return `
 

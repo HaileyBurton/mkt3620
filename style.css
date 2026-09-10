@@ -972,3 +972,298 @@ footer a:hover {
     }
 
 }
+/* =========================================================
+   ABOUT ME PAGE
+   ========================================================= */
+
+.about-hero {
+
+    min-height: 365px;
+
+    background: #faf7f3;
+
+    border-bottom: 1px solid #e7e1dc;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 40px;
+}
+
+
+.about-hero-inner {
+
+    max-width: 620px;
+}
+
+
+.about-hero .small-heading {
+
+    color: #927c72;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+
+.about-hero h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(48px, 6vw, 70px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 24px;
+}
+
+
+.about-hero h1 span {
+
+    color: #927c72;
+}
+
+
+.about-hero p {
+
+    color: #716b67;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    max-width: 520px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+   ========================================================= */
+
+.about-content {
+
+    padding: 46px 42px 55px;
+}
+
+
+.about-content h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    line-height: 1.25;
+
+    margin-bottom: 20px;
+}
+
+
+.about-content > p {
+
+    color: #716b67;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    max-width: 680px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   DIVIDERS
+   ========================================================= */
+
+.about-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #e4ded8;
+
+    margin: 38px 0 30px;
+}
+
+
+/* =========================================================
+   ABOUT CARDS
+   ========================================================= */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+
+.about-card {
+
+    border: 1px solid #e7e1dc;
+
+    padding: 22px 19px;
+
+    background: #ffffff;
+}
+
+
+.about-card:hover {
+
+    border-color: #927c72;
+}
+
+
+.about-number {
+
+    color: #927c72;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 9px;
+}
+
+
+.about-card h3 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    margin-bottom: 8px;
+}
+
+
+.about-card p {
+
+    color: #716b67;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ABOUT BOTTOM
+   ========================================================= */
+
+.about-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.about-bottom h2 {
+
+    margin-bottom: 0;
+
+    font-size: 27px;
+}
+
+
+.about-button {
+
+    display: inline-block;
+
+    background: #302c2a;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    white-space: nowrap;
+}
+
+
+.about-button:hover {
+
+    background: #927c72;
+}
+
+
+/* =========================================================
+   ABOUT PAGE MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .about-hero {
+
+        min-height: 400px;
+
+        padding: 40px 25px;
+    }
+
+
+    .about-content {
+
+        padding: 40px 25px 50px;
+    }
+
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}

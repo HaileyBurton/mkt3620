@@ -267,11 +267,9 @@ body {
 
     padding: 42px 25px;
 
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
+    /* CHANGED:
+       No longer pushes Quick Links to bottom */
+    display: block;
 }
 
 
@@ -342,6 +340,7 @@ body {
 
 /* =========================================================
    QUICK LINKS
+   NOW DIRECTLY UNDER EXPLORE
    ========================================================= */
 
 .quick-links {
@@ -349,6 +348,8 @@ body {
     border-top: 1px solid #e4ded8;
 
     padding-top: 27px;
+
+    margin-top: 35px;
 }
 
 
@@ -622,11 +623,9 @@ body {
 
     padding: 42px 23px;
 
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
+    /* CHANGED:
+       No longer pushes Connect to bottom */
+    display: block;
 }
 
 
@@ -646,6 +645,10 @@ body {
     margin-bottom: 23px;
 }
 
+
+/* =========================================================
+   RIGHT LINKS
+   ========================================================= */
 
 .right-link {
 
@@ -681,11 +684,16 @@ body {
 
 /* =========================================================
    CONNECT
+   DIRECTLY UNDER MY WORK
    ========================================================= */
 
 .connect {
 
-    padding-top: 35px;
+    padding-top: 28px;
+
+    margin-top: 30px;
+
+    border-top: 1px solid #e4ded8;
 }
 
 

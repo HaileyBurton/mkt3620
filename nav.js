@@ -1,6 +1,5 @@
 /* =========================================================
-   HAILEY
-   SHARED NAVIGATION
+   HAILEY SHARED NAVIGATION
    ========================================================= */
 
 
@@ -34,79 +33,67 @@ const navigationItems = [
 ];
 
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+document.addEventListener("DOMContentLoaded", function () {
 
 
-        const navigationContainer =
-            document.getElementById("navigation");
+    const nav = document.getElementById("nav");
 
 
-        if (!navigationContainer) {
+    if (!nav) {
+        return;
+    }
 
-            return;
 
+    let currentPage =
+        window.location.pathname
+            .split("/")
+            .pop();
+
+
+    if (currentPage === "") {
+        currentPage = "index.html";
+    }
+
+
+    let html = '<div class="nav-links">';
+
+
+    navigationItems.forEach(function (item) {
+
+
+        let active = "";
+
+
+        if (item.url === currentPage) {
+            active = "active";
         }
 
 
-        let currentPage =
-            window.location.pathname
-                .split("/")
-                .pop();
-
-
-        if (!currentPage) {
-
-            currentPage = "index.html";
-
+        if (
+            item.name === "Explore" &&
+            window.location.hash === "#explore"
+        ) {
+            active = "active";
         }
 
 
-        navigationContainer.innerHTML = `
+        html += `
 
-            <div class="nav-links">
-
-                ${navigationItems.map(function (item) {
-
-                    let isActive = false;
-
-
-                    if (
-                        item.url === currentPage
-                    ) {
-
-                        isActive = true;
-
-                    }
-
-
-                    if (
-                        item.name === "Explore" &&
-                        window.location.hash === "#explore"
-                    ) {
-
-                        isActive = true;
-
-                    }
-
-
-                    return `
-
-                        <a
-                            href="${item.url}"
-                            class="${isActive ? "active" : ""}"
-                        >
-                            ${item.name}
-                        </a>
-
-                    `;
-
-                }).join("")}
-
-            </div>
+            <a
+                href="${item.url}"
+                class="${active}"
+            >
+                ${item.name}
+            </a>
 
         `;
 
-    }
-);
+    });
+
+
+    html += "</div>";
+
+
+    nav.innerHTML = html;
+
+});

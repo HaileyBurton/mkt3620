@@ -12,7 +12,7 @@ const navigationItems = [
 
     {
         name: "Explore",
-        url: "#explore"
+        url: "#explore.html"
     },
 
     {

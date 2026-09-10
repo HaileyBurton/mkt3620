@@ -1,6 +1,6 @@
 /* =========================================================
    HAILEY PORTFOLIO
-   CLEAN PROFESSOR WIREFRAME LAYOUT
+   PROFESSOR WIREFRAME + HAILEY BRANDING
    ========================================================= */
 
 
@@ -21,6 +21,7 @@ html {
 
 
 body {
+
     background: #faf9f7;
 
     color: #292929;
@@ -39,7 +40,7 @@ body {
 
 
 /* =========================================================
-   WEBSITE WIDTH
+   WEBSITE
    10% BACKGROUND | 80% WEBSITE | 10% BACKGROUND
    ========================================================= */
 
@@ -74,14 +75,14 @@ body {
 
 
 /* =========================================================
-   TOP INFORMATION
+   LOGO + MARKETING / EVENTS / CREATIVITY
    ========================================================= */
 
 .top-information {
 
     width: 100%;
 
-    min-height: 85px;
+    min-height: 100px;
 
     padding: 18px 45px;
 
@@ -91,15 +92,55 @@ body {
 }
 
 
-.top-label {
+/* =========================================================
+   HB LOGO
+   ========================================================= */
 
-    width: 100%;
+.header-logo {
+
+    width: 76px;
+
+    height: 76px;
 
     display: flex;
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+
+.header-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   TOP WORDS
+   ========================================================= */
+
+.top-label {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    margin-left: 48px;
 
     color: #9b7b75;
 
@@ -308,6 +349,44 @@ body {
 
 
 .side-link:hover {
+
+    color: #9b7b75;
+}
+
+
+/* =========================================================
+   QUICK LINKS
+   ========================================================= */
+
+.side-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #e5e3e0;
+
+    margin: 38px 0 28px;
+}
+
+
+.small-link {
+
+    display: block;
+
+    color: #686868;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    margin-bottom: 13px;
+
+    transition: color 0.2s ease;
+}
+
+
+.small-link:hover {
 
     color: #9b7b75;
 }
@@ -610,6 +689,10 @@ body {
 }
 
 
+/* =========================================================
+   RIGHT LINKS
+   ========================================================= */
+
 .right-link {
 
     display: flex;
@@ -649,6 +732,60 @@ body {
 .right-link:hover span {
 
     transform: translateX(4px);
+}
+
+
+/* =========================================================
+   CONNECT
+   ========================================================= */
+
+.connect-section {
+
+    margin-top: 38px;
+}
+
+
+.social-links {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.social-links a {
+
+    width: 31px;
+
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #9b7b75;
+
+    border-radius: 50%;
+
+    color: #9b7b75;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.social-links a:hover {
+
+    background: #9b7b75;
+
+    color: #ffffff;
 }
 
 
@@ -704,6 +841,7 @@ footer {
 
 @media (max-width: 1050px) {
 
+
     .site-wrapper {
 
         width: 90vw;
@@ -736,6 +874,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
+
+    .top-label {
+
+        margin-left: 35px;
+
+        letter-spacing: 2px;
+    }
+
 }
 
 
@@ -744,6 +890,7 @@ footer {
    ========================================================= */
 
 @media (max-width: 750px) {
+
 
     body {
 
@@ -759,17 +906,29 @@ footer {
 
     .top-information {
 
-        min-height: 75px;
+        min-height: 90px;
 
-        padding: 18px 25px;
+        padding: 15px 25px;
+    }
+
+
+    .header-logo {
+
+        width: 65px;
+
+        height: 65px;
     }
 
 
     .top-label {
 
-        font-size: 10px;
+        margin-left: 20px;
 
-        letter-spacing: 2px;
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+
+        gap: 8px;
     }
 
 
@@ -867,17 +1026,28 @@ footer {
 
 @media (max-width: 450px) {
 
+
     .site-wrapper {
 
         width: 100vw;
     }
 
 
+    .header-logo {
+
+        width: 58px;
+
+        height: 58px;
+    }
+
+
     .top-label {
 
-        font-size: 8px;
+        font-size: 7px;
 
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
+
+        margin-left: 12px;
     }
 
 

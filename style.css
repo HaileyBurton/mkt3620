@@ -1265,14 +1265,12 @@ footer a:hover {
 
         align-items: flex-start;
     }
-
 .headshot {
-    width: 180px !important;
-    height: 220px !important;
+    width: 180px;
+    height: 220px;
     object-fit: cover;
+    border: 6px solid #8b6f5a;
     border-radius: 8px;
-    border: 5px solid #8b6f5a !important;
     display: block;
     margin: 0 auto 25px;
-    box-sizing: border-box;
 }

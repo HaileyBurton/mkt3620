@@ -9,9 +9,9 @@ const navigationItems = [
     },
 
     {
-        name: "Explore",
-        url: "explore.html"
-    },
+    name: "Experience",
+    url: "experience.html"
+},
 
     {
         name: "Projects",

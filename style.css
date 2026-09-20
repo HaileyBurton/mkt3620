@@ -1265,7 +1265,7 @@ footer a:hover {
 
         align-items: flex-start;
     }
-.headshot {
+.about-hero-inner .headshot {
     width: 180px !important;
     height: 220px !important;
     max-width: 180px !important;
@@ -1274,4 +1274,5 @@ footer a:hover {
     border-radius: 8px;
     display: block;
     margin: 0 auto 25px;
+    box-sizing: border-box;
 }

@@ -1267,11 +1267,12 @@ footer a:hover {
     }
 
 .headshot {
-    width: 180px;
-    height: 220px;
+    width: 180px !important;
+    height: 220px !important;
     object-fit: cover;
     border-radius: 8px;
-    border: 4px solid #8b6f5a;
+    border: 5px solid #8b6f5a !important;
     display: block;
     margin: 0 auto 25px;
+    box-sizing: border-box;
 }
